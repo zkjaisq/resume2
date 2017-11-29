@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>resume</title>
+    <link rel="stylesheet" href="./loading.css">
     <link rel="stylesheet" href="./resume.css">
     <script src="//at.alicdn.com/t/font_451959_668are8d7ca0pb9.js">
     </script>
@@ -19,6 +20,9 @@
 </head>
 
 <body>
+    <div id="loadingpage" class="loadingpage active">
+        <div class="loading"></div>
+    </div>
     <div class="topnavbar">
         <div class="topnavbar-inner clearfix">
             <a class="logo" href="#">
@@ -195,7 +199,12 @@
 
 
     </main>
-
+<script>
+    setTimeout(function(){
+        loadingpage.classList.remove('active')
+    },3000)
+    
+</script>
 
 </body>
 
