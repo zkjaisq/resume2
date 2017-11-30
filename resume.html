@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>resume</title>
-    <link rel="stylesheet" href="./loading.css">
     <link rel="stylesheet" href="./resume.css">
     <script src="//at.alicdn.com/t/font_451959_668are8d7ca0pb9.js">
     </script>
@@ -23,7 +22,7 @@
     <div id="loadingpage" class="loadingpage active">
         <div class="loading"></div>
     </div>
-    <div class="topnavbar">
+    <div id="topnavbar" class="topnavbar">
         <div class="topnavbar-inner clearfix">
             <a class="logo" href="#">
                 <span class="rs">RS</span>
@@ -34,14 +33,26 @@
                     <li>
                         <a href="#">关于</a>
                     </li>
-                    <li>
-                        <a href="#">技能</a>
+                    <li class="menuTigger">
+                        <a  href="#">技能</a>
+                        <ul id="slideMenu" class="slidemenu">
+                            <li>原生JS</li>
+                            <li>Bootstrap</li>
+                            <li>jquery</li>
+                        </ul>
+
                     </li>
                     <li>
-                        <a href="#">经验</a>
+                        <a  href="#">经验</a>
                     </li>
-                    <li>
-                        <a href="#">博客</a>
+                    <li class="menuTigger">
+                        <a  href="#">博客</a>
+                        <ul id="slideMenu" class="slidemenu">
+                            <li>博客1</li>
+                            <li>博客2</li>
+                            <li>博客3</li>
+                        </ul>
+
                     </li>
                     <li>
                         <a href="#">日历</a>
@@ -199,12 +210,7 @@
 
 
     </main>
-<script>
-    setTimeout(function(){
-        loadingpage.classList.remove('active')
-    },3000)
-    
-</script>
+    <script src="./resume.js"></script>
 
 </body>
 
