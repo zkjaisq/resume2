@@ -22,7 +22,51 @@ ul{
     display: block;
     clear: both;
   }
-  
+  .loadingpage.active{
+    display: flex;
+}
+.loadingpage{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray; 
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+.loading{
+  height:200px;
+  width: 200px;
+  position:relative;
+}
+.loading::after,.loading::before{
+  content: '';
+  background-color: #333;
+  height:10px;
+  width:10px;
+  border-radius:50%;
+  position:absolute;
+  top:0px ;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  margin:auto;
+  animation: s 1.5s infinite;
+}
+.loading::after{
+  animation-delay: -1s;
+}
+@keyframes s{
+  0%{
+    width:0; height:0; opacity:1;
+  }
+  100%{
+    width:100px; height:100px; opacity: 0;
+  }
+}
   .topnavbar{
       padding: 17px 0px 9px 0px;
       position: fixed;
