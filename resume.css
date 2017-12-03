@@ -128,7 +128,8 @@ ul{
     display: block;
     position: relative;
 }
-.topnavbar .navbar >ul>li.active> a::after{
+.topnavbar .navbar >ul>li.active> a::after,
+.topnavbar .navbar >ul>li.lightheigh> a::after{
     content: "";
     display: block;
     position: absolute;
