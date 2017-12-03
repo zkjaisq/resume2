@@ -21,6 +21,11 @@ for (let i = 0; i < liTags.length; i++) {
     }
 
 }
+function animate(time) {
+    requestAnimationFrame(animate);
+    TWEEN.update(time);
+}
+requestAnimationFrame(animate);
 let aTags = document.querySelectorAll('nav.navbar > ul >li >a')
 
 for (let i = 0; i < aTags.length; i++) {
@@ -47,7 +52,18 @@ for (let i = 0; i < aTags.length; i++) {
             window.scrollTo(0,currentTop + distance * i)
         },duration)*/
        //以上就是页面滑动的动画，只不过是动的速度一样，时间是确定的，但是不同的距离速度不同。
-       
-
+       let currentTop = window.scrollY
+       let targetTop = top - 70
+       let s = currentTop - targetTop
+       var coords = { y: currentTop, }; 
+       var t = Math.abs((s/100)*300)
+       if(t > 600){ t = 600}
+       var tween = new TWEEN.Tween(coords) 
+               .to({ y: targetTop }, 800) 
+               .easing(TWEEN.Easing.Quadratic.InOut) 
+               .onUpdate(function() { 
+                  window.scrollTo(0,coords.y)
+               })
+               .start();
     }
 }
