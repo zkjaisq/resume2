@@ -22,7 +22,7 @@ ul{
     display: block;
     clear: both;
   }
-  .loadingpage.active{
+.loadingpage.active{
     display: flex;
 }
 .loadingpage{
@@ -67,6 +67,14 @@ ul{
     width:100px; height:100px; opacity: 0;
   }
 }
+[data-x].offSet{
+    transform: translateY(300px);
+}
+[data-x]{
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
 .topnavbar.sticky{
     background-color: white;
     color: #3d4451;
@@ -301,7 +309,9 @@ ul{
     font-size: 20px;
     line-height: 36px;
 }
-.part2,protfolio{
+.part2,
+.protfolio,
+.portfolio{
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;

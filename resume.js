@@ -1,8 +1,16 @@
 setTimeout(function () {
     loadingpage.classList.remove('active')
 }, 1000)
+
+let speciousTags =document.querySelectorAll('[data-x]')
+console.log(speciousTags)
+for(let i = 0;i < speciousTags.length; i++){
+    speciousTags[i].classList.add('offSet')
+}
+
 window.onscroll = function () {
     window.scrollY > 0 ? topnavbar.classList.add('sticky') : topnavbar.classList.remove('sticky')
+
     let speciousTags = document.querySelectorAll('[data-x]')
     let minIndex = 0
     for(let i = 1;i < speciousTags.length; i++){
@@ -10,10 +18,9 @@ window.onscroll = function () {
         minIndex = i
         }
     }
-    console.log(minIndex)
+    speciousTags[minIndex].classList.remove('offSet')
     let id = speciousTags[minIndex].id
     let a = document.querySelector('a[href="#'+ id + '"]')
-    console.log(a)
     let li = a.parentNode
     let brotherAndme = li.parentNode.children
     for(let i = 0; i <brotherAndme.length; i++){
