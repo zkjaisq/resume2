@@ -1,7 +1,7 @@
 body{
     margin: 0;
     background-color: #efefef;
-
+    font-family: cursive;
 }
 *{
     margin: 0;
@@ -68,7 +68,7 @@ ul{
   }
 }
 [data-x].offSet{
-    transform: translateY(300px);
+    transform: translateY(80px);
 }
 [data-x]{
     transform: translateY(0);
@@ -78,9 +78,9 @@ ul{
 .topnavbar.sticky{
     background-color: white;
     color: #3d4451;
-    padding: 8px 10px 20px 30px;
+    padding: 8px 0 10px 0;
     box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
   .topnavbar{
     padding: 20px 10px;
@@ -147,6 +147,7 @@ ul{
     height: 3px;
     background: red;
     animation: slide 0.3s;
+    border-radius: 2px;
 }
 @keyframes slide{
     0%{
@@ -181,6 +182,20 @@ ul{
     display: block;
     animation: slidemenu 0.3s;
 }
+.navbar li.active> .slidemenu> li {
+    position: relative;
+}
+.navbar li.active> .slidemenu>li a:hover::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: red;
+}
 .banner{
     background-image: url(./rs-cover.jpg);
     height: 515px;
@@ -200,7 +215,7 @@ ul{
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
-    margin-top: -245px;
+    margin-top: -345px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
    
 }
@@ -237,6 +252,7 @@ ul{
 }
 .usercard .text h1{
     padding-top: 30px;
+    font-family: cursive;
 }
 .usercard .text hr{
     height:0px;
@@ -350,10 +366,20 @@ ul{
    .part2 .progress{
        background-color: #E86767;
        height: 100%;
-       width: 40%;
-       border-radius: 2px;
-       
-   }
+       border-radius: 2px; 
+     
+    }
+    .part2.active .progress{
+        animation: bar  1s;
+    }
+ @keyframes bar{
+     0%{
+         width: 0;
+     }
+     100%{
+         width: data-width;
+     }
+ }
 .part2 .skill h3{
     font-size: 14px;
     line-height: 1.1;

@@ -1,16 +1,13 @@
 setTimeout(function () {
     loadingpage.classList.remove('active')
-}, 1000)
+}, 200)
 
 let speciousTags =document.querySelectorAll('[data-x]')
 console.log(speciousTags)
 for(let i = 0;i < speciousTags.length; i++){
     speciousTags[i].classList.add('offSet')
 }
-
-window.onscroll = function () {
-    window.scrollY > 0 ? topnavbar.classList.add('sticky') : topnavbar.classList.remove('sticky')
-
+function pdd(){
     let speciousTags = document.querySelectorAll('[data-x]')
     let minIndex = 0
     for(let i = 1;i < speciousTags.length; i++){
@@ -19,6 +16,7 @@ window.onscroll = function () {
         }
     }
     speciousTags[minIndex].classList.remove('offSet')
+    speciousTags[minIndex].classList.add('active')
     let id = speciousTags[minIndex].id
     let a = document.querySelector('a[href="#'+ id + '"]')
     let li = a.parentNode
@@ -27,7 +25,16 @@ window.onscroll = function () {
         brotherAndme[i].classList.remove('lightheigh')
     }
     li.classList.add('lightheigh')
-}//当滑动到相对应的位置的时候a标签下面的高亮，而且不出现子菜单。
+}
+setTimeout(function(){
+    pdd()
+},500)
+window.onscroll = function () {
+    window.scrollY > 0 ? topnavbar.classList.add('sticky') : topnavbar.classList.remove('sticky')
+    pdd()
+}
+
+//当滑动到相对应的位置的时候a标签下面的高亮，而且不出现子菜单。
 let liTags = document.querySelectorAll('nav.navbar >ul > li')
 console.log(liTags)
 //遍历数组来进行操作如果aTags是一个数组
@@ -50,8 +57,12 @@ function animate(time) {
     TWEEN.update(time);
 }
 requestAnimationFrame(animate);
-let aTags = document.querySelectorAll('nav.navbar > ul >li >a')
+let Tags =document.querySelectorAll('nav.navbar > ul > li > ul >li')
+console.log(Tags)
 
+
+
+let aTags = document.querySelectorAll('nav.navbar > ul >li >a')
 for (let i = 0; i < aTags.length; i++) {
     aTags[i].onclick = function (x) {
         x.preventDefault()//取消点击跳转到锚点事件
