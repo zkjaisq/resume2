@@ -1,21 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <title>resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <link rel="stylesheet" href="path/to/swiper.min.css">
     <link rel="stylesheet" href="./resume.css">
     <script src= "https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script src="//at.alicdn.com/t/font_451959_668are8d7ca0pb9.js">
     </script>
-    <style type="text/css">
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -176,43 +173,48 @@
         </section>
             <section data-x id="Works" class="portfolio">
                 <h2 >作品</h2>
-                <nav>
-                    <ul class="clearfix">
-                        <li id="portfolio1">原生</li>
-                        <li id="portfolio2">框架</li>
-                        <li id="portfolio3">原生JS&amp;css</li>
-                    </ul>
-                    <div id="portfolioBar" class="bar state-1">
-                        <div class="barinner"></div>
-                    </div>
                 </nav>
-                <script>
-                    portfolio1.onclick = function () {
-                        portfolioBar.className = 'bar state-1'
-                    }
-                    portfolio2.onclick = function () {
-                        portfolioBar.className = 'bar state-2'
-                    }
-                    portfolio3.onclick = function () {
-                        portfolioBar.className = 'bar state-3'
-                    }
-                </script>
-            <div class="work" >
-                <div class="big">
-                    <img src="./1.jpg" alt="picture">
-                </div>
-                <div class="small" style="top: 0; right: 0;">
-                    <img src="./2.jpg" alt="picture" >
-                </div>
-                <div class="small" style="right: 0; top: 312px;">
-                    <img src="./3.jpg" alt="picture" >
-                </div>
-            </div>
+                <div class="swiper-parent">
+                        <div class="swiper-container">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                   <img src="./images/canvas.png" alt="photo" width="900" class="swiper-slide">
+                                   <img src="./images/我的导航.png" alt="photo" width="900" class="swiper-slide">
+                                   <img src="./images/苹果风格轮播.png" alt="photo" width="900" class="swiper-slide">
+                              
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+                             
+                                <!-- If we need navigation buttons -->
+                                
+                                <!-- If we need scrollbar -->
+                                
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                             
+                </div>       
         </section>
-    <script src="./resume.js"></script>
-
+        <section class="sectionend">
+            <h2>留言</h2>
+            <ul id="messageLeave">
+                
+            </ul>
+            <form action="post" id="formmessage">
+               <label for="name">姓名:<input type="text" name="name"  id="name"></label> 
+               <label for="message">信息:<input type="text" name=message id="input"></label>
+               
+              <button >提交</button>
+            </form>
+        </section>
 </body>
-
+<script src="./resume.js"></script>
+<script src="path/to/swiper.min.js"></script>
+<script src="./init-swiper.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
+<script src="./init-leancloud.js"></script>
 </html>
 
 </html>

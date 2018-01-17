@@ -6,6 +6,7 @@ body{
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 a{
     color: inherit;
@@ -22,6 +23,23 @@ ul{
     display: block;
     clear: both;
   }
+
+  
+.swiper-container {
+    width: 736px;
+    height: 552px;
+}  
+.icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+
+
+
+
 .loadingpage.active{
     display: flex;
 }
@@ -446,7 +464,51 @@ section .work{
     position: relative;
     height: 597px;
 }
-section .big,
-section .small{
-    position: absolute;
+
+.portfolio  h2{ margin-bottom: 30px;}
+.swiper-container{box-shadow: 0px 0px 3px rgba(0,0,0,0.75);
+border-radius: 2px;margin-bottom: 20px;}
+
+
+
+
+
+.swiper-button-prev,
+.swiper-button-next{background-color: rgba(0,0,0,0.1);
+    box-shadow:  0px 0px 3px rgba(0,0,0,0.3);width: 50px;
+    height: 70px;top: calc(50% + 50px);right: 100%;left: auto;
+}
+.swiper-button-next{left: 100%;right: auto;
+}
+
+
+
+
+.sectionend{max-width: 940px;margin: 0 auto;   
+}
+.sectionend h2{font-size: 34px;margin-top: 70px;text-align: center;
+}
+.sectionend form{margin: 40px 0;
+}
+.sectionend #input:focus{outline: none;border-color: deepskyblue;
+}
+
+.sectionend  input[type=text]{padding: 0px 10px;width: 350px;height: 40px;margin-right: 20px;
+}
+.sectionend  #name:focus{outline: none;border-color: deepskyblue;
+}
+.sectionend button{ width: 88px;padding: 9px;border: none;
+box-shadow: 0 0 2px rgba(0,0,0,0.3);margin-left: 20px;
+}
+   
+#messageLeave{
+    background-color: #f9f7f7;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+#messageLeave li{border-top-color: #b8c1c9;
+    border-bottom-color: #b8c1c9;box-shadow: 0  0 1px rgba(0,0,0,0.3);
+    padding: 10px 120px;
+    font-size: 20px;
 }
