@@ -7,6 +7,21 @@ AV.init({
 });
 
 
+    var query = new AV.Query('message');
+    query.find().then(function (messages) {
+ 
+        let array = messages.map((item) => item.attributes)
+        let newArray = array.slice(-10,array.lenght)
+        console.log(newArray)
+        newArray.forEach(item => {
+            let li = document.createElement('li')
+      
+            li.innerText = `${item.name}:${item.content}`
+      
+            messageLeave.append(li)
+        });
+
+    })
 
 
 
@@ -14,48 +29,33 @@ AV.init({
 //bingEvent
 formmessage.addEventListener('submit', function (x) {
     x.preventDefault()
-
     let xxx = AV.Object.extend('message');
     let message = new xxx();
     let who = document.getElementById('name').value
     let savemessage = document.getElementById('input').value
-    message.save({
-        'name': who,
-        'content': savemessage,
-
-    }).then(function (object) {
-        var query = new AV.Query('message');
-        query.find().then(function (messages) {
-            console.log(messages)
-            let array = messages.map((item) => item.attributes)
-            console.log(array)
-            array.forEach(item => {
-                let li = document.createElement('li')
-                console.log(1)
-                li.innerText = `${item.name}:${item.content}`
-                console.log(2)
-                messageLeave.append(li)
-             document.getElementById('name').value = null
-             document.getElementById('input').value = null
-            });
- 
+    if(who === '' || savemessage === ''){
+        alert('请填写完整的信息')
+    }else{
+        message.save({
+            'name': who,
+            'content': savemessage,
+    
+        }).then(function (object) {
+            let lists = document.querySelectorAll('#messageLeave > li')
+            let name = document.getElementById('name').value 
+            let input = document.getElementById('input').value 
+            let li = document.createElement('li')
+             li.innerText = name  + ':' + input
+             messageLeave.append(li)
+             document.getElementById('input').value  = null;
+             document.getElementById('name').value = null;
+         if(lists.length >= 10){
+            lists[length].remove()
+         }
+               
         })
-    })
+    }
+   
 })
 
 
-var query = new AV.Query('message');
-query.find().then(function (messages) {
-    console.log(messages)
-    let array = messages.map((item) => item.attributes)
-    console.log(array)
-    array.forEach(item => {
-        let li = document.createElement('li')
-        console.log(1)
-        li.innerText = `${item.name}:${item.content}`
-        console.log(2)
-        messageLeave.append(li)
-        console.log(3)
-    });
-
-})
