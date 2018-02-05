@@ -1,6 +1,5 @@
 !function(){
     var view = View('nav.navbar')
-    console.log(view)
     var controller = {
         view:null,
         aTags :null,
@@ -34,8 +33,6 @@
               .start(); // 开始缓动
           },
         bindEvents:function(){
-            console.log(1)
-            console.log(this)
             let aTags = this.view.querySelectorAll('.navbar > ul >li >a')
             console.log(aTags)
             for (let i = 0; i < aTags.length; i++) {
@@ -44,7 +41,6 @@
                      let a = x.currentTarget
                     let href = a.getAttribute('href')
                     let element = document.querySelector(href)
-                    console.log(element)
                     this.scrollToElement(element)                 
             }
         }

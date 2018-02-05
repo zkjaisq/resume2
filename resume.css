@@ -498,7 +498,7 @@ border-radius: 2px;margin-bottom: 20px;}
 .sectionend  #name:focus{outline: none;border-color: deepskyblue;
 }
 .sectionend button{ width: 88px;padding: 9px;border: none;
-box-shadow: 0 0 2px rgba(0,0,0,0.3);margin-left: 20px;
+box-shadow: 0 0 2px rgba(0,0,0,0.3);margin-left: 0px;
 outline: none;
 }
    
