@@ -1,14 +1,15 @@
 !function(){
-    var view = document.querySelector('nav.navbar')
+    var view = View('nav.navbar')
+    console.log(view)
     var controller = {
         view:null,
         aTags :null,
         init: function(){
-            this.view = view
-          this.initAnimationf()
+          this.view = view
+          this.initAnimation()
           this.bindEvents()
         },
-        initAnimationf:function(){
+        initAnimation:function(){
             function animate(time) {
                 requestAnimationFrame(animate);
                 TWEEN.update(time);
@@ -18,7 +19,7 @@
         scrollToElement: function(element){
             let top = element.offsetTop
             let currentTop = window.scrollY
-            let targetTop = top - 80
+            let targetTop = top - 100
             let s = targetTop - currentTop // 路程
             var coords = { y: currentTop}; // 起始位置
             var t = Math.abs((s/100)*300) // 时间
@@ -33,13 +34,17 @@
               .start(); // 开始缓动
           },
         bindEvents:function(){
-            let aTags = this.view.querySelectorAll('nav.navbar > ul >li >a')
+            console.log(1)
+            console.log(this)
+            let aTags = this.view.querySelectorAll('.navbar > ul >li >a')
+            console.log(aTags)
             for (let i = 0; i < aTags.length; i++) {
                 aTags[i].onclick =  (x)=>{
                     x.preventDefault()//取消点击跳转到锚点事件
                      let a = x.currentTarget
                     let href = a.getAttribute('href')
                     let element = document.querySelector(href)
+                    console.log(element)
                     this.scrollToElement(element)                 
             }
         }

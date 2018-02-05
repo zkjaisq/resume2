@@ -1,5 +1,6 @@
 !function(){
     let speciousTags =document.querySelectorAll('[data-x]')
+    console.log(speciousTags)
     for(let i = 0;i < speciousTags.length; i++){
         speciousTags[i].classList.add('offSet')
     }
