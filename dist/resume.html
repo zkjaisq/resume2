@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <title>resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+    <script src="//at.alicdn.com/t/font_451959_668are8d7ca0pb9.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="loadingpage" class="loadingpage active">
+        <div class="loading"></div>
+    </div>
+    <div id="topnavbar" class="topnavbar">
+        <div class="topnavbar-inner clearfix">
+            <a class="logo" href="#">
+                <span class="rs">RS</span>
+                <span class="card">card</span>
+            </a>
+            <nav class="navbar">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#About">关于</a>
+                    </li>
+                    <li class="menuTigger">
+                        <a href="#Skill">技能</a>
+                        <ul id="slideMenu" class="slidemenu">
+                            <li>
+                                <a href="#">原生JS</a>
+                            </li>
+                            <li>
+                                <a href="#">Bootstrap</a>
+                            </li>
+                            <li>
+                                <a href="#">jquery</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="#Works">作品</a>
+                    </li>
+                    <li class="menuTigger">
+                        <a href="#Blog">博客</a>
+                        <ul id="slideMenu" class="slidemenu">
+                            <li>
+                                <a href="#">博客1</a>
+                            </li>
+                            <li>
+                                <a href="#">博客2</a>
+                            </li>
+                            <li>
+                                <a href="#">博客3</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="#Calendar">日历</a>
+                    </li>
+                    <li>
+                        <a href="#Other">其他</a>
+                    </li>
+                    <li>
+                        <a href="#OnAbout">关于</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
+    <div>
+        <div data-x id="About" class="usercard ">
+            <div class="pictureAndtext  clearfix ">
+                <div class="picture">
+                    <img src="./img/robert.jpg" width=299px; height=347px; alt="相片">
+                </div>
+                <div class="text">
+                    <span class="hello">HELLO
+                        <span class="triangle"></span>
+                    </span>
+                    <h1>张科家</h1>
+                    <p style="font-family:cursive;">静心写代码</p>
+                    <hr>
+                    <dl>
+                        <dt>年龄</dt>
+                        <dd>22</dd>
+                        <dt>地址</dt>
+                        <dd>湖北随州</dd>
+                        <dt>邮箱</dt>
+                        <dd>18771964684@163.com</dd>
+                        <dt>电话</dt>
+                        <dd>18771964684</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tuite_twitter"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+            </footer>
+        </div>
+
+
+        <section class="part1">
+            <p class="downloadresume">
+                <a href="#" class="download">下&nbsp;载&nbsp;简&nbsp;历</a>
+            </p>
+            <p class="self" style="font-family:cursive;">我们经常的做梦，却总是难以醒来；经常的幻想却总是难以实现，经常的抱怨却总是不去努力；经常的计划却总是没有勇于实践。不喜欢读书，却不得不为了文凭奔波；不喜欢运动却难以忍受一身赘肉，不善于言谈却必须去推销自己……人生，其实就是这样的无奈但又必须去接受。
+            </p>
+        </section>
+    </div>
+    <section data-x id="Skill" class="part2">
+        <h2 class="skilltitle ">技能</h2>
+        <ul class="skill clearfix">
+            <li>
+                <h3>HTML&css</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width:70%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <div>
+                    <div class="progressbar">
+                        <div class="progress" style="width:30%;"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>node</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width:10%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>vue</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width:10%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>jquery</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width:10%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>react</h3>
+                <div class="progressbar">
+                    <div class="progress" style="width:10%;"></div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section data-x id="Works" class="portfolio">
+        <h2>作品</h2>
+        <div class="swiper-parent">
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <img src="./img/canvas.png" alt="photo" width="900" class="swiper-slide">
+                    <img src="./img/我的导航.png" alt="photo" width="900" class="swiper-slide">
+                    <img src="./img/苹果风格轮播.png" alt="photo" width="900" class="swiper-slide">
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+
+                <!-- If we need scrollbar -->
+
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+    </section>
+    <section class="sectionend">
+        <h2>留言</h2>
+        <ul id="messageLeave">
+
+        </ul>
+        <form action="post" id="formmessage">
+            <label for="name">姓名:
+                <input type="text" name="name" id="name">
+            </label>
+            <label for="message">信息:
+                <input type="text" name=message id="input">
+            </label>
+
+            <button>提交</button>
+        </form>
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
+<script src="./bundle.js"></script>
+
+</html>
+
+</html>
